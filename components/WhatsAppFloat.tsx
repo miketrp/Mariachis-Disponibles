@@ -66,12 +66,12 @@ export default function WhatsAppFloat() {
         </motion.a>
       </motion.div>
 
-      {/* Botón de WhatsApp */}
+      {/* Botón de WhatsApp con diseño mejorado */}
       <motion.a
         href="https://wa.me/+573214388706?text=Hola,%20vi%20su%20página%20y%20quiero%20cotizar%20un%20paquete%20de%20mariachis%20para%20mi%20evento"
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+        className="bg-gradient-to-br from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-white p-4 rounded-full shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl"
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 2, duration: 0.5 }}
@@ -79,7 +79,15 @@ export default function WhatsAppFloat() {
         whileTap={{ scale: 0.9 }}
         title="Contáctanos por WhatsApp"
       >
-        <FaWhatsapp size={30} />
+        <div className="relative">
+          <FaWhatsapp size={32} className="drop-shadow-lg" />
+          {/* Efecto de pulso sutil */}
+          <motion.div
+            className="absolute inset-0 bg-green-400 rounded-full opacity-20"
+            animate={{ scale: [1, 1.2, 1] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          />
+        </div>
       </motion.a>
     </div>
   )
