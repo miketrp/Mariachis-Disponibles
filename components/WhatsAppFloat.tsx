@@ -15,7 +15,7 @@ export default function WhatsAppFloat() {
       >
         {/* Facebook */}
         <motion.a
-          href="https://www.facebook.com/mariachisbogota"
+          href="https://www.facebook.com/profile.php?id=100090928906987"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
