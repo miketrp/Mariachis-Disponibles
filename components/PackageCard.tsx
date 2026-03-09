@@ -48,7 +48,7 @@ export default function PackageCard({ pkg, index }: PackageCardProps) {
         <div className="space-y-3 mb-6">
           <div className="flex items-center space-x-2 text-gray-700 dark:text-gray-300">
             <FaUsers className="text-mariachi-red" />
-            <span>{pkg.musicians} músicos profesionales</span>
+            <span>Músicos Profesionales</span>
           </div>
           
           <div className="flex items-center space-x-2 text-gray-700 dark:text-gray-300">
@@ -66,7 +66,7 @@ export default function PackageCard({ pkg, index }: PackageCardProps) {
 
         <div className="mb-6">
           <p className="text-sm text-gray-600 dark:text-gray-400">
-            Ideal para: {pkg.description}
+            {pkg.description}
           </p>
         </div>
 

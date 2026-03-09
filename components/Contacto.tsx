@@ -24,7 +24,6 @@ export default function Contacto() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Here you would typically send the form data to your backend
     alert('Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.')
     setFormData({
       name: '',
@@ -94,7 +93,6 @@ export default function Contacto() {
                 </div>
               </div>
 
-
               <div className="flex items-start space-x-4">
                 <FaClock className="text-mariachi-red text-xl mt-1" />
                 <div>
@@ -129,7 +127,7 @@ export default function Contacto() {
               <div className="grid grid-cols-1 gap-4">
                 <div className="relative">
                   <img
-                    src="/images/services/boda-mariachi-1.jpg"
+                    src="/images/services/quinceanera-mariachi-1.jpg"
                     alt="Mariachis en Boda"
                     className="w-full h-32 object-cover rounded-lg"
                   />
@@ -139,7 +137,7 @@ export default function Contacto() {
                 </div>
                 <div className="relative">
                   <img
-                    src="/images/services/quinceanera-mariachi-1.jpg"
+                    src="/images/services/cultura-mariachi-1.jpg"
                     alt="Mariachis en Quinceañeras"
                     className="w-full h-32 object-cover rounded-lg"
                   />
@@ -149,7 +147,7 @@ export default function Contacto() {
                 </div>
                 <div className="relative">
                   <img
-                    src="/images/services/cultura-mariachi-1.jpg"
+                    src="/images/services/boda-mariachi-1.jpg"
                     alt="Cultura del Mariachi"
                     className="w-full h-32 object-cover rounded-lg"
                   />
@@ -272,12 +270,10 @@ export default function Contacto() {
                   className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-mariachi-red focus:border-transparent dark:bg-gray-700 dark:text-white"
                 >
                   <option value="">Selecciona un paquete</option>
-                  <option value="serenata-express">Paquete 1 Express sin obsequios</option>
-                  <option value="serenata-express-plus">Paquete 2 Express con obsequios</option>
-                  <option value="fiesta-charra">Paquete 3 sin obsequios</option>
-                  <option value="fiesta-charra-premium">Paquete 4 con obsequios</option>
-                  <option value="gran-evento">Paquete 5 grupo de 6 músicos</option>
-                  <option value="experiencia-vip">Paquete 6 Experiencia VIP</option>
+                  <option value="paquete-entre-semana">Paquete Entre Semana</option>
+                  <option value="paquete-entre-semana-2">Paquete Entre Semana 2</option>
+                  <option value="paquetes-fin-semana">Paquetes Fin de Semana</option>
+                  <option value="paquete-fin-semana-sin-obsequios">Paquete fin de semana sin obsequios</option>
                   <option value="personalizado">Personalizado</option>
                 </select>
               </div>

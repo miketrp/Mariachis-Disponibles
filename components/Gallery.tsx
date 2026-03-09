@@ -7,25 +7,25 @@ import { useState } from 'react'
 const galleryImages = [
   {
     id: 1,
-    src: '/images/mariachis-show.jpg',
+    src: '/images/590414226_17917616082209925_1026574243202176143_n.jpeg',
     alt: 'Mariachis en evento',
     category: 'Eventos',
   },
   {
     id: 2,
-    src: '/images/Mariachi2.jpg',
+    src: '/images/480594031_601909132850045_7332236528635650548_n.jpg',
     alt: 'Serenata romántica',
     category: 'Serenatas',
   },
   {
     id: 3,
-    src: '/images/Mariachi-Mexico2.jpg',
+    src: '/images/image_25bf8868.png',
     alt: 'Boda con mariachis',
     category: 'Bodas',
   },
   {
     id: 4,
-    src: '/images/mariachismex.jpg',
+    src: '/images/511771289_10162698176784650_7185014361270726574_n.jpg',
     alt: 'Cumpleaños con mariachis',
     category: 'Cumpleaños',
   },
@@ -37,9 +37,27 @@ const galleryImages = [
   },
   {
     id: 6,
-    src: '/images/marichisshow.jpg',
+    src: '/images/Mariachi2.jpg',
     alt: 'Evento corporativo',
     category: 'Corporativos',
+  },
+  {
+    id: 7,
+    src: '/images/marichisshow.jpg',
+    alt: 'Presentación de mariachis',
+    category: 'Presentaciones',
+  },
+  {
+    id: 8,
+    src: '/images/Mariachis.jpg',
+    alt: 'Grupo de mariachis',
+    category: 'Grupos',
+  },
+  {
+    id: 9,
+    src: '/images/487603392_613045378403087_1324443717655948432_n.jpg',
+    alt: 'Música tradicional',
+    category: 'Tradición',
   },
 ]
 

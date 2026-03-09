@@ -18,7 +18,7 @@ export default function SEO({
   description = 'Contrata los mejores mariachis en Bogotá. Serenatas, cumpleaños, bodas, quinceañeras y eventos corporativos. Precios desde $350.000. Más de 10 años de experiencia. Cotiza ahora por WhatsApp al +573214388706.',
   keywords = ['mariachis bogotá', 'serenatas bogotá', 'mariachis baratos bogotá', 'grupos de mariachis bogotá', 'precio mariachis bogotá'],
   canonicalUrl = 'https://mariachisbogota.com',
-  ogImage = 'https://mariachisbogota.com/og-image.jpg',
+  ogImage = 'https://mariachisbogota.com/images/Portada Mariachi.png',
   ogType = 'website',
   noIndex = false
 }: SEOProps) {
