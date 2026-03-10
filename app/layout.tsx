@@ -2,11 +2,14 @@ import type { Metadata } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/ThemeProvider'
+import Analytics from '@/components/Analytics'
+import SpeedInsightsComponent from '@/components/SpeedInsights'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://mariachisbogota.com'),
   title: 'Mariachis Bogotá Élite | Servicio Profesional de Mariachis en Bogotá',
   description: 'Contrata los mejores mariachis en Bogotá. Serenatas, cumpleaños, bodas, quinceañeras y eventos corporativos. Más de 10 años de experiencia. Precios desde $350.000.',
   authors: [{ name: 'Mariachis Bogotá Élite' }],
@@ -55,11 +58,13 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://mariachisbogota.com" />
+        <Analytics />
       </head>
       <body className={`${inter.variable} ${playfair.variable} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
         </ThemeProvider>
+        <SpeedInsightsComponent />
       </body>
     </html>
   )

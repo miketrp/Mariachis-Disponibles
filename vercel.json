@@ -1,0 +1,74 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "regions": ["iad1"],
+  "functions": {
+    "app/api/contact/route.ts": {
+      "maxDuration": 30
+    }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "query",
+          "key": "verified",
+          "value": "true"
+        }
+      ],
+      "headers": [
+        {
+          "key": "X-Verified",
+          "value": "true"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/mariachis-bogota",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/serenatas-bogota",
+      "destination": "/#paquetes",
+      "permanent": true
+    },
+    {
+      "source": "/precios-mariachis-bogota",
+      "destination": "/#paquetes",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/sitemap.xml",
+      "destination": "/api/sitemap"
+    }
+  ]
+}
