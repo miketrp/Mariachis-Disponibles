@@ -1,6 +1,6 @@
 'use client'
 
-import { FaFacebook, FaInstagram, FaTiktok, FaPhone } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaTiktok, FaPhone, FaYoutube } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 
 export default function SocialButtons() {
@@ -22,6 +22,12 @@ export default function SocialButtons() {
       url: 'https://www.tiktok.com/@mariachibogota81',
       icon: FaTiktok,
       color: 'bg-black hover:bg-gray-800',
+    },
+    {
+      name: 'YouTube',
+      url: 'https://www.youtube.com/@mariachisdebogota',
+      icon: FaYoutube,
+      color: 'bg-red-600 hover:bg-red-700',
     },
     {
       name: 'Llamar',
