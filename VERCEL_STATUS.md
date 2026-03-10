@@ -43,9 +43,9 @@
 ## 📱 Características Implementadas
 
 ### Botones de Redes Sociales (Lado Izquierdo):
-- 🔵 **Facebook:** facebook.com/mariachisbogota
-- 📸 **Instagram:** instagram.com/mariachisbogota
-- 🎵 **TikTok:** tiktok.com/@mariachisbogota
+- 🔵 **Facebook:** https://www.facebook.com/profile.php?id=100090928906987
+- 📸 **Instagram:** https://www.instagram.com/mariachi.bogota/
+- 🎵 **TikTok:** https://www.tiktok.com/@mariachibogota81
 - 📞 **Llamar:** +573214388706 (directo)
 
 ### Optimizaciones:

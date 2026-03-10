@@ -7,19 +7,19 @@ export default function SocialButtons() {
   const socialLinks = [
     {
       name: 'Facebook',
-      url: 'https://facebook.com/mariachisbogota',
+      url: 'https://www.facebook.com/profile.php?id=100090928906987',
       icon: FaFacebook,
       color: 'bg-blue-600 hover:bg-blue-700',
     },
     {
       name: 'Instagram',
-      url: 'https://instagram.com/mariachisbogota',
+      url: 'https://www.instagram.com/mariachi.bogota/',
       icon: FaInstagram,
       color: 'bg-pink-600 hover:bg-pink-700',
     },
     {
       name: 'TikTok',
-      url: 'https://tiktok.com/@mariachisbogota',
+      url: 'https://www.tiktok.com/@mariachibogota81',
       icon: FaTiktok,
       color: 'bg-black hover:bg-gray-800',
     },
