@@ -100,7 +100,7 @@ export default function Testimonios() {
               </div>
 
               <p className="text-gray-700 dark:text-gray-300 mb-4 italic">
-                "{testimonial.text}"
+                &ldquo;{testimonial.text}&rdquo;
               </p>
 
               <div className="flex items-center space-x-3">
