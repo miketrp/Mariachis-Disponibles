@@ -10,21 +10,21 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://mariachisbogota.com'),
-  title: 'Mariachis Bogotá Élite | Servicio Profesional de Mariachis en Bogotá',
+  metadataBase: new URL('https://mariachisdisponiblesbogota.com'),
+  title: 'Mariachis en Bogotá | Servicio Profesional de Mariachis - Mariachis Disponibles',
   description: 'Contrata los mejores mariachis en Bogotá. Serenatas, cumpleaños, bodas, quinceañeras y eventos corporativos. Más de 10 años de experiencia. Precios desde $350.000.',
-  authors: [{ name: 'Mariachis Bogotá Élite' }],
+  authors: [{ name: 'Mariachis Disponibles Bogotá' }],
   openGraph: {
-    title: 'Mariachis Bogotá Élite - Servicio Profesional de Mariachis',
+    title: 'Mariachis Disponibles - Servicio Profesional de Mariachis en Bogotá',
     description: 'Los mejores mariachis de Bogotá para tu evento. Serenatas, bodas, cumpleaños, quinceañeras y eventos corporativos.',
-    url: 'https://mariachisbogota.com',
-    siteName: 'Mariachis Bogotá Élite',
+    url: 'https://mariachisdisponiblesbogota.com',
+    siteName: 'Mariachis Disponibles Bogotá',
     images: [
       {
-        url: 'https://mariachisbogota.com/og-image.jpg',
+        url: 'https://mariachisdisponiblesbogota.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Mariachis Bogotá Élite',
+        alt: 'Mariachis Disponibles Bogotá',
       },
     ],
     locale: 'es_CO',
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mariachis Bogotá Élite | Servicio Profesional de Mariachis en Bogotá',
+    title: 'Mariachis en Bogotá | Servicio Profesional de Mariachis - Mariachis Disponibles',
     description: 'Contrata mariachis profesionales en Bogotá. Serenatas, bodas, quinceañeras, eventos corporativos.',
-    images: ['https://mariachisbogota.com/twitter-image.jpg'],
+    images: ['https://mariachisdisponiblesbogota.com/twitter-image.jpg'],
   },
   robots: {
     index: true,
@@ -58,7 +58,7 @@ export default function RootLayout({
     <html lang="es" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" />
-        <link rel="canonical" href="https://mariachisbogota.com" />
+        <link rel="canonical" href="https://mariachisdisponiblesbogota.com" />
         <Analytics />
       </head>
       <body className={`${inter.variable} ${playfair.variable} font-sans`}>

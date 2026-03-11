@@ -43,6 +43,13 @@ export default function SocialButtons() {
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5, delay: 0.5 }}
       className="fixed left-4 top-1/2 transform -translate-y-1/2 z-50 flex flex-col space-y-3"
+      style={{ 
+        position: 'fixed',
+        left: '1rem',
+        top: '50%',
+        transform: 'translateY(-50%)',
+        zIndex: 50
+      }}
     >
       {socialLinks.map((social, index) => (
         <motion.a
@@ -50,13 +57,14 @@ export default function SocialButtons() {
           href={social.url}
           target="_blank"
           rel="noopener noreferrer"
-          className={`${social.color} text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110`}
+          className={`${social.color} text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 flex items-center justify-center`}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3, delay: index * 0.1 }}
           title={social.name}
+          aria-label={social.name}
         >
           <social.icon size={20} />
         </motion.a>
