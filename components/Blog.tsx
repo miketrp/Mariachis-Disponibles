@@ -106,13 +106,15 @@ export default function Blog() {
                     {post.readTime}
                   </span>
                   
-                  <Link
-                    href="#"
+                  <a
+                    href="https://wa.me/+573214388706?text=Hola,%20vi%20su%20página%20y%20quiero%20cotizar%20un%20paquete%20de%20mariachis%20para%20mi%20evento"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-mariachi-red dark:text-mariachi-gold hover:text-mariachi-red/80 dark:hover:text-mariachi-gold/80 font-semibold flex items-center space-x-1 transition-colors duration-300"
                   >
                     <span>Leer más</span>
                     <FaArrowRight className="text-xs" />
-                  </Link>
+                  </a>
                 </div>
               </div>
             </motion.article>
@@ -126,13 +128,15 @@ export default function Blog() {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <Link
-            href="#"
+          <a
+            href="https://wa.me/+573214388706?text=Hola,%20vi%20su%20página%20y%20quiero%20cotizar%20un%20paquete%20de%20mariachis%20para%20mi%20evento"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-mariachi-red hover:bg-mariachi-red/80 text-white px-8 py-3 rounded-full text-lg font-semibold transition-colors duration-300 inline-flex items-center space-x-2"
           >
             <span>Ver todos los artículos</span>
             <FaArrowRight />
-          </Link>
+          </a>
         </motion.div>
       </div>
     </section>

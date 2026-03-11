@@ -14,11 +14,11 @@ interface SEOProps {
 }
 
 export default function SEO({
-  title = 'Mariachis Bogotá Élite | Servicio Profesional de Mariachis en Bogotá',
+  title = 'Mariachis en Bogotá | Servicio Profesional de Mariachis - Mariachis Disponibles',
   description = 'Contrata los mejores mariachis en Bogotá. Serenatas, cumpleaños, bodas, quinceañeras y eventos corporativos. Precios desde $350.000. Más de 10 años de experiencia. Cotiza ahora por WhatsApp al +573214388706.',
-  keywords = ['mariachis bogotá', 'serenatas bogotá', 'mariachis baratos bogotá', 'grupos de mariachis bogotá', 'precio mariachis bogotá'],
-  canonicalUrl = 'https://mariachisbogota.com',
-  ogImage = 'https://mariachisbogota.com/images/Portada Mariachi.png',
+  keywords = ['mariachis bogota', 'mariachis en bogota', 'serenatas bogota', 'mariachis baratos bogota', 'grupos de mariachis bogota', 'precio mariachis bogota', 'mariachis disponibles bogota', 'mariachis disponibles', 'contratar mariachis bogota', 'mariachis para bodas bogota', 'mariachis para quinceañeras bogota', 'mariachis para cumpleaños bogota', 'mariachis profesionales bogota'],
+  canonicalUrl = 'https://mariachisdisponiblesbogota.com',
+  ogImage = 'https://mariachisdisponiblesbogota.com/images/Portada Mariachi.png',
   ogType = 'website',
   noIndex = false
 }: SEOProps) {
@@ -94,13 +94,13 @@ export default function SEO({
       script.textContent = JSON.stringify({
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "Mariachis Bogotá Élite",
+        "name": "Mariachis Disponibles Bogotá",
         "url": canonicalUrl,
         "potentialAction": {
           "@type": "SearchAction",
           "target": {
             "@type": "EntryPoint",
-            "urlTemplate": "https://mariachisbogota.com/?s={search_term_string}"
+            "urlTemplate": "https://mariachisdisponiblesbogota.com/?s={search_term_string}"
           },
           "query-input": "required name=search_term_string"
         }
@@ -119,25 +119,25 @@ export default function SEO({
           "@type": "ListItem",
           "position": 1,
           "name": "Inicio",
-          "item": "https://mariachisbogota.com/"
+          "item": "https://mariachisdisponiblesbogota.com/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Paquetes",
-          "item": "https://mariachisbogota.com/#paquetes"
+          "item": "https://mariachisdisponiblesbogota.com/#paquetes"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Galería",
-          "item": "https://mariachisbogota.com/#galeria"
+          "item": "https://mariachisdisponiblesbogota.com/#galeria"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "Contacto",
-          "item": "https://mariachisbogota.com/#contacto"
+          "item": "https://mariachisdisponiblesbogota.com/#contacto"
         }
       ]
     })

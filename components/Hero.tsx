@@ -29,8 +29,8 @@ export default function Hero() {
         >
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6 font-serif">
             <span className="sr-only">Mariachis </span>
-            <span className="text-mariachi-gold">Bogotá</span>{' '}
-            Élite
+            <span className="text-mariachi-gold">Mariachis</span>{' '}
+            en Bogotá
           </h1>
           
           <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed">

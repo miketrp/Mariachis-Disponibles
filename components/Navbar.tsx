@@ -29,7 +29,7 @@ export default function Navbar() {
               <span className="text-white font-bold text-xl">🎺</span>
             </div>
             <span className="text-xl font-bold text-mariachi-red font-serif">
-              Mariachis Bogotá Élite
+              Mariachis en Bogotá
             </span>
           </Link>
 
@@ -45,14 +45,6 @@ export default function Navbar() {
               </Link>
             ))}
             
-            {/* Theme Toggle */}
-            <button
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className="p-2 rounded-lg bg-mariachi-red text-white hover:bg-mariachi-red/80 transition-colors duration-300"
-            >
-              {theme === 'dark' ? <FaSun /> : <FaMoon />}
-            </button>
-
             {/* Llamar Ahora - Botón de llamada instantánea */}
             <a
               href="tel:+573214388706"
@@ -65,12 +57,6 @@ export default function Navbar() {
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
-            <button
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className="p-2 rounded-lg bg-mariachi-red text-white"
-            >
-              {theme === 'dark' ? <FaSun /> : <FaMoon />}
-            </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-mariachi-black dark:text-white"

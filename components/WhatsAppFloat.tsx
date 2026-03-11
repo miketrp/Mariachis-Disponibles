@@ -5,8 +5,8 @@ import Image from 'next/image'
 
 export default function WhatsAppFloat() {
   return (
-    <div className="fixed bottom-6 right-6 z-50">
-      {/* Botón de WhatsApp con diseño mejorado y logo SVG */}
+    <div className="fixed bottom-10 right-6 z-50">
+      {/* Botón de WhatsApp con diseño mejorado y logo personalizado */}
       <motion.a
         href="https://wa.me/+573214388706?text=Hola,%20vi%20su%20página%20y%20quiero%20cotizar%20un%20paquete%20de%20mariachis%20para%20mi%20evento"
         target="_blank"
@@ -21,7 +21,7 @@ export default function WhatsAppFloat() {
       >
         <div className="relative">
           <Image
-            src="/images/whatsapp-logo.png"
+            src="/images/—Pngtree—whatsapp icon logo whatsapp logo_3560533.png"
             alt="WhatsApp"
             width={32}
             height={32}
