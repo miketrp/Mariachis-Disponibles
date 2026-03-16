@@ -94,7 +94,7 @@ export default function Packages() {
                 <span role="img" aria-label="música">🎵</span>
               </div>
               <h4 className="text-xl font-bold text-mariachi-red dark:text-mariachi-gold mb-2">Canción Adicional</h4>
-              <p className="text-2xl font-bold text-gray-800 dark:text-white mb-3">$80.000<span className="text-base font-normal text-gray-600 dark:text-gray-400">/canción</span></p>
+              <p className="text-2xl font-bold text-gray-800 dark:text-white mb-3">$50.000<span className="text-base font-normal text-gray-600 dark:text-gray-400">/canción</span></p>
               <p className="text-gray-600 dark:text-gray-300">Agrega canciones extras a tu evento</p>
             </div>
 
