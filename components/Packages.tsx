@@ -75,7 +75,53 @@ export default function Packages() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="mt-20"
+        >
+          <div className="text-center mb-12">
+            <h3 className="text-3xl md:text-4xl font-bold text-mariachi-red dark:text-mariachi-gold mb-4 font-serif">
+              Servicios Adicionales
+            </h3>
+            <p className="text-lg text-gray-700 dark:text-gray-300">
+              Personaliza aún más tu experiencia con nuestros servicios extra
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 text-center border-2 border-transparent hover:border-mariachi-red dark:hover:border-mariachi-gold transition-colors duration-300">
+              <div className="text-4xl mb-4">
+                <span role="img" aria-label="música">🎵</span>
+              </div>
+              <h4 className="text-xl font-bold text-mariachi-red dark:text-mariachi-gold mb-2">Canción Adicional</h4>
+              <p className="text-2xl font-bold text-gray-800 dark:text-white mb-3">$80.000<span className="text-base font-normal text-gray-600 dark:text-gray-400">/canción</span></p>
+              <p className="text-gray-600 dark:text-gray-300">Agrega canciones extras a tu evento</p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 text-center border-2 border-transparent hover:border-mariachi-red dark:hover:border-mariachi-gold transition-colors duration-300">
+              <div className="text-4xl mb-4">
+                <span role="img" aria-label="grupo">👥</span>
+              </div>
+              <h4 className="text-xl font-bold text-mariachi-red dark:text-mariachi-gold mb-2">Músicos Extra</h4>
+              <p className="text-2xl font-bold text-gray-800 dark:text-white mb-3">$50.000<span className="text-base font-normal text-gray-600 dark:text-gray-400">/músico</span></p>
+              <p className="text-gray-600 dark:text-gray-300">Agrega más músicos a tu grupo para un sonido más potente</p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 text-center border-2 border-transparent hover:border-mariachi-red dark:hover:border-mariachi-gold transition-colors duration-300">
+              <div className="text-4xl mb-4">
+                <span role="img" aria-label="regalo">🎁</span>
+              </div>
+              <h4 className="text-xl font-bold text-mariachi-red dark:text-mariachi-gold mb-2">Obsequios Personalizados</h4>
+              <p className="text-2xl font-bold text-gray-800 dark:text-white mb-3">Desde $30.000</p>
+              <p className="text-gray-600 dark:text-gray-300">Regalos especiales para el homenajeado</p>
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
           className="text-center mt-12"
         >
