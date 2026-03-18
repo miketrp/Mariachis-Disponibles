@@ -2,7 +2,20 @@
 
 ## 📊 Últimos Cambios Subidos
 
-### ✅ Commit: `20c27b31` - Botones de Redes Sociales Flotantes
+### ✅ Commit: `016a9748` - Agregar sección de Servicios Adicionales
+**Fecha:** 2:20 PM - 16/3/2026
+**Descripción:** Agregar tarjetas de servicios adicionales debajo de paquetes
+
+**Cambios incluidos:**
+- ✅ Sección "Servicios Adicionales" agregada debajo de "Nuestros Paquetes"
+- ✅ Canción Adicional: $80.000/canción
+- ✅ Músicos Extra: $50.000/músico
+- ✅ Obsequios Personalizados: Desde $30.000
+- ✅ Diseño responsive con iconos y efectos hover
+- ✅ Compatibilidad con modo oscuro
+- ✅ Mejoras en accesibilidad con atributos aria-label
+
+### ✅ Commit Anterior: `20c27b31` - Botones de Redes Sociales Flotantes
 **Fecha:** 7:27 PM - 3/9/2026
 **Descripción:** Agregar botones de redes sociales flotantes en lado izquierdo
 
@@ -14,18 +27,6 @@
 - ✅ Colores de marca para cada red social
 - ✅ Efectos hover y transiciones suaves
 - ✅ Botones responsivos y accesibles con tooltips
-
-### ✅ Commit Anterior: `049e7dfb` - Actualización para Vercel
-**Fecha:** 7:14 PM - 3/9/2026
-**Descripción:** Actualizar proyecto para Vercel con Speed Insights y Analytics
-
-**Cambios incluidos:**
-- ✅ @vercel/speed-insights instalado para monitoreo de rendimiento
-- ✅ Integración de SpeedInsights directamente en layout
-- ✅ Componente Analytics actualizado con Vercel Analytics
-- ✅ Configuración de metadataBase para SEO
-- ✅ Archivo vercel.json con configuración optimizada
-- ✅ Documentación de despliegue creada
 
 ## 🚀 Estado del Despliegue
 
@@ -41,6 +42,11 @@
 - **Proyecto Vercel:** https://vercel.com/maikoltrp-3598s-projects/mariachis-disponibles
 
 ## 📱 Características Implementadas
+
+### Servicios Adicionales (Nueva Sección):
+- 🎵 **Canción Adicional:** $80.000 por canción extra
+- 👥 **Músicos Extra:** $50.000 por músico adicional
+- 🎁 **Obsequios Personalizados:** Desde $30.000
 
 ### Botones de Redes Sociales (Lado Izquierdo):
 - 🔵 **Facebook:** https://www.facebook.com/profile.php?id=100090928906987
@@ -70,16 +76,19 @@
 
 ## 🔄 Estado de Sincronización
 
-- ✅ **GitHub:** Actualizado con últimos cambios
+- ✅ **GitHub:** Actualizado con últimos cambios (Commit: 016a9748)
 - ✅ **Vercel:** Conectado y configurado para despliegue automático
-- ✅ **Build:** Exitoso sin errores críticos
+- ✅ **Build:** En proceso de despliegue automático
 - ✅ **Dominio:** Configurado y funcionando
 
-## 📋 Próximos Pasos
+## 📋 Estado del Último Despliegue
 
-El proyecto está actualizado y funcionando correctamente. Los cambios deberían reflejarse automáticamente en el despliegue de Vercel en pocos minutos.
+**Commit:** 016a9748 - Agregar sección de Servicios Adicionales
+**Estado:** ✓ En proceso de despliegue automático
+**Tiempo estimado:** 2-5 minutos
+**URL de despliegue:** Disponible en el dashboard de Vercel
 
 Para verificar el estado del despliegue:
 1. Visitar https://vercel.com/maikoltrp-3598s-projects/mariachis-disponibles
 2. Revisar la pestaña de "Deployments" para ver el estado actual
-3. Los botones de redes sociales flotantes deberían estar visibles en el lado izquierdo
+3. La nueva sección de "Servicios Adicionales" debería estar visible debajo de "Nuestros Paquetes"
