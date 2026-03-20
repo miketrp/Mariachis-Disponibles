@@ -59,7 +59,6 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://mariachisdisponiblesbogota.com" />
-        <Analytics />
       </head>
       <body className={`${inter.variable} ${playfair.variable} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
@@ -67,6 +66,7 @@ export default function RootLayout({
         </ThemeProvider>
         <SpeedInsights />
         <SocialButtons />
+        <Analytics />
       </body>
     </html>
   )

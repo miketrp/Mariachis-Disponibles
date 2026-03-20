@@ -21,7 +21,7 @@ export default function WhatsAppFloat() {
       >
         <div className="relative">
           <Image
-            src="/images/—Pngtree—whatsapp icon logo whatsapp logo_3560533.png"
+            src="/images/icons8-whatsapp-200.apng.png"
             alt="WhatsApp"
             width={32}
             height={32}

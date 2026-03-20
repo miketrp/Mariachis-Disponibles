@@ -19,7 +19,7 @@ const galleryImages = [
   },
   {
     id: 3,
-    src: '/images/image_25bf8868.png',
+    src: '/images/Mariachi.jpg',
     alt: 'Boda con mariachis',
     category: 'Bodas',
   },

@@ -27,6 +27,8 @@ El componente `Analytics` en `components/Analytics.tsx` incluye:
 - ✅ Facebook Pixel
 - ✅ Schema.org LocalBusiness
 
+**Nota:** El componente Analytics se ha actualizado para usar `useEffect` en lugar de renderizar scripts directamente, lo que soluciona problemas de hidratación.
+
 ### Speed Insights
 El componente `SpeedInsights` en `components/SpeedInsights.tsx` proporciona:
 - ✅ Métricas de rendimiento en tiempo real
