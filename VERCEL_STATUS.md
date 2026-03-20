@@ -1,94 +1,90 @@
-# Estado del Proyecto en Vercel - Mariachis Disponibles
+# Estado de Despliegue Vercel - Mariachis Disponibles
 
-## 📊 Últimos Cambios Subidos
+## ✅ Última Actualización: Marzo 20, 2026
 
-### ✅ Commit: `016a9748` - Agregar sección de Servicios Adicionales
-**Fecha:** 2:20 PM - 16/3/2026
-**Descripción:** Agregar tarjetas de servicios adicionales debajo de paquetes
+### Cambios Recientes Subidos a GitHub
 
-**Cambios incluidos:**
-- ✅ Sección "Servicios Adicionales" agregada debajo de "Nuestros Paquetes"
-- ✅ Canción Adicional: $80.000/canción
-- ✅ Músicos Extra: $50.000/músico
-- ✅ Obsequios Personalizados: Desde $30.000
-- ✅ Diseño responsive con iconos y efectos hover
-- ✅ Compatibilidad con modo oscuro
-- ✅ Mejoras en accesibilidad con atributos aria-label
+#### 📸 Actualizaciones de Imágenes
+- **Galería**: Foto de bodas actualizada a `Mariachi.jpg`
+- **WhatsApp**: Icono actualizado a `icons8-whatsapp-200.apng.png`
 
-### ✅ Commit Anterior: `20c27b31` - Botones de Redes Sociales Flotantes
-**Fecha:** 7:27 PM - 3/9/2026
-**Descripción:** Agregar botones de redes sociales flotantes en lado izquierdo
+#### 🔧 Soluciones Técnicas
+- ✅ **Error de Hidratación**: Solucionado en componente `Analytics.tsx`
+- ✅ **Componente Analytics**: Reubicado de `<head>` a `<body>` en `layout.tsx`
+- ✅ **Optimización**: Uso de `useEffect` para carga de scripts
 
-**Cambios incluidos:**
-- ✅ Componente SocialButtons creado con iconos de Facebook, Instagram, TikTok y teléfono
-- ✅ Botones flotantes posicionados en el lado izquierdo de la pantalla
-- ✅ Animaciones con Framer Motion para entrada y hover
-- ✅ Integración en el layout principal para aparecer en todas las páginas
-- ✅ Colores de marca para cada red social
-- ✅ Efectos hover y transiciones suaves
-- ✅ Botones responsivos y accesibles con tooltips
+#### 🚀 Configuración de Despliegue
+- **GitHub Actions**: Pipeline creado en `.github/workflows/deploy.yml`
+- **Documentación**: Actualizada en `DEPLOY_VERCEL.md` y `.github/README.md`
 
-## 🚀 Estado del Despliegue
+## 📊 Estado del Proyecto
 
-### Configuración Actual:
-- **Framework:** Next.js 14.0.0
-- **Build:** ✓ Exitoso
-- **Optimizaciones:** ✓ CSS optimizado habilitado
-- **Analytics:** ✓ Vercel Analytics activo
-- **Speed Insights:** ✓ Monitoreo de rendimiento activo
+### Requisitos para Despliegue en Vercel
+- ✅ Node.js 18+ configurado
+- ✅ Next.js 14 con App Router
+- ✅ TypeScript
+- ✅ Tailwind CSS
+- ✅ Vercel Analytics integrado
+- ✅ Vercel Speed Insights integrado
+- ✅ Configuración SEO completa
+- ✅ GitHub Actions configurado
 
-### URLs del Proyecto:
-- **Repositorio GitHub:** https://github.com/miketrp/Mariachis-Disponibles
-- **Proyecto Vercel:** https://vercel.com/maikoltrp-3598s-projects/mariachis-disponibles
+### Secrets Necesarios para GitHub Actions
+Para el despliegue automático, configurar en GitHub:
+- `VERCEL_TOKEN`: Token de autenticación de Vercel
+- `ORG_ID`: ID de la organización en Vercel  
+- `PROJECT_ID`: ID del proyecto en Vercel
 
-## 📱 Características Implementadas
+## 🔄 Proceso de Despliegue
 
-### Servicios Adicionales (Nueva Sección):
-- 🎵 **Canción Adicional:** $80.000 por canción extra
-- 👥 **Músicos Extra:** $50.000 por músico adicional
-- 🎁 **Obsequios Personalizados:** Desde $30.000
+### Automático (Recomendado)
+1. Push a rama `main` activa GitHub Actions
+2. Pipeline ejecuta: lint → build → deploy
+3. Despliegue automático en Vercel
 
-### Botones de Redes Sociales (Lado Izquierdo):
-- 🔵 **Facebook:** https://www.facebook.com/profile.php?id=100090928906987
-- 📸 **Instagram:** https://www.instagram.com/mariachi.bogota/
-- 🎵 **TikTok:** https://www.tiktok.com/@mariachibogota81
-- 📞 **Llamar:** +573214388706 (directo)
+### Manual
+```bash
+# Instalar Vercel CLI
+npm i -g vercel
 
-### Optimizaciones:
-- ✅ SEO metadata configurada
-- ✅ Headers de seguridad aplicados
-- ✅ Redirecciones SEO-friendly
-- ✅ Sitemap y robots.txt actualizados
-- ✅ Favicon configurado
-- ✅ Analytics y tracking activo
+# Login y despliegue
+vercel login
+vercel --prod
+```
 
-## 📊 Monitoreo
+## 📈 Monitoreo Post-Despliegue
 
-### Vercel Analytics:
-- Tracking de usuarios activo
-- Métricas de página vistas
-- Análisis de tráfico
+### Vercel Analytics
+- Dashboard: https://vercel.com/dashboard/analytics
+- Métricas disponibles en 24-48 horas
 
-### Speed Insights:
-- Monitoreo de Core Web Vitals
-- Análisis de velocidad de carga
-- Métricas de rendimiento en tiempo real
+### Vercel Speed Insights  
+- Dashboard: https://vercel.com/dashboard/speed-insights
+- Web Vitals y rendimiento en tiempo real
 
-## 🔄 Estado de Sincronización
+## 🎯 Próximos Pasos
 
-- ✅ **GitHub:** Actualizado con últimos cambios (Commit: 016a9748)
-- ✅ **Vercel:** Conectado y configurado para despliegue automático
-- ✅ **Build:** En proceso de despliegue automático
-- ✅ **Dominio:** Configurado y funcionando
+1. **Configurar Secrets en GitHub** para despliegue automático
+2. **Verificar dominio** en Vercel Dashboard
+3. **Monitorear métricas** tras 48 horas del despliegue
+4. **Optimizar rendimiento** basado en Speed Insights
 
-## 📋 Estado del Último Despliegue
+## 🆘 Soporte
 
-**Commit:** 016a9748 - Agregar sección de Servicios Adicionales
-**Estado:** ✓ En proceso de despliegue automático
-**Tiempo estimado:** 2-5 minutos
-**URL de despliegue:** Disponible en el dashboard de Vercel
+Si hay problemas con el despliegue:
+1. Verificar logs de GitHub Actions
+2. Revisar configuración en Vercel Dashboard  
+3. Consultar documentación en `DEPLOY_VERCEL.md`
+4. Verificar que todos los secrets estén configurados
 
-Para verificar el estado del despliegue:
-1. Visitar https://vercel.com/maikoltrp-3598s-projects/mariachis-disponibles
-2. Revisar la pestaña de "Deployments" para ver el estado actual
-3. La nueva sección de "Servicios Adicionales" debería estar visible debajo de "Nuestros Paquetes"
+## 📋 Checklist de Despliegue
+
+- ✅ Código subido a GitHub
+- ✅ GitHub Actions configurado
+- ✅ Sin errores de compilación
+- ✅ Sin errores de hidratación
+- ✅ Imágenes actualizadas
+- ✅ Documentación actualizada
+- ⏳ Configurar secrets en GitHub
+- ⏳ Verificar despliegue automático
+- ⏳ Monitorear analytics y rendimiento

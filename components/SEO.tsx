@@ -86,99 +86,62 @@ export default function SEO({
       }
     }
     
-    // Agregar estructura de datos JSON-LD adicional
-    const existingScript = document.querySelector('script[type="application/ld+json"]')
-    if (!existingScript) {
-      const script = document.createElement('script')
-      script.type = 'application/ld+json'
-      script.textContent = JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Mariachis Disponibles Bogotá",
-        "url": canonicalUrl,
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": {
-            "@type": "EntryPoint",
-            "urlTemplate": "https://mariachisdisponiblesbogota.com/?s={search_term_string}"
-          },
-          "query-input": "required name=search_term_string"
-        }
-      })
-      document.head.appendChild(script)
-    }
-    
-    // Agregar datos de navegación breadcrumb
-    const breadcrumbScript = document.createElement('script')
-    breadcrumbScript.type = 'application/ld+json'
-    breadcrumbScript.textContent = JSON.stringify({
+    // === SCRIPT DE LOCALBUSINESS PARA MOTORES DE BÚSQUEDA ===
+    const localBusinessScript = document.createElement('script')
+    localBusinessScript.type = 'application/ld+json'
+    localBusinessScript.textContent = JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
+      "@type": "LocalBusiness",
+      "name": "Mariachis Disponibles Bogotá",
+      "url": "https://mariachisdisponiblesbogota.com/",
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=100090928906987",
+        "https://www.instagram.com/mariachi.bogota/",
+        "https://www.youtube.com/@mariachisdebogota",
+        "https://www.tiktok.com/@mariachibogota81"
+      ],
+      "telephone": "+573214388706",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Carrera 12H bis A # 27b-16 sur",
+        "addressLocality": "Bogotá",
+        "addressRegion": "Cundinamarca",
+        "postalCode": "111111",
+        "addressCountry": "CO"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 4.711,
+        "longitude": -74.0721
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "08:00",
+        "closes": "22:00"
+      },
+      "priceRange": "$$$",
+      "areaServed": [
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Inicio",
-          "item": "https://mariachisdisponiblesbogota.com/"
+          "@type": "City",
+          "name": "Bogotá"
         },
         {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Paquetes",
-          "item": "https://mariachisdisponiblesbogota.com/#paquetes"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Galería",
-          "item": "https://mariachisdisponiblesbogota.com/#galeria"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Contacto",
-          "item": "https://mariachisdisponiblesbogota.com/#contacto"
+          "@type": "City",
+          "name": "Soacha"
         }
       ]
     })
-    document.head.appendChild(breadcrumbScript)
+    document.head.appendChild(localBusinessScript)
     
-    // Agregar datos de FAQ si es la página principal
-    if (pathname === '/') {
-      const faqScript = document.createElement('script')
-      faqScript.type = 'application/ld+json'
-      faqScript.textContent = JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "¿Cuánto cuesta contratar mariachis en Bogotá?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Los precios de mariachis en Bogotá varían según el paquete. Ofrecemos paquetes desde $200.000 COP con 4 músicos y 6 canciones, hasta paquetes VIP con 8 músicos y 12 canciones por $400.000 COP."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Qué incluye el servicio de mariachis?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Nuestros servicios incluyen músicos profesionales con trajes típicos, repertorio de más de 100 canciones, equipo de sonido profesional, y en algunos paquetes incluimos obsequios como ramos de flores o champagne."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Cómo puedo reservar mariachis para mi evento?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Puedes reservar fácilmente a través de WhatsApp al +573214388706 o llamando directamente. También puedes cotizar online a través de nuestro formulario web. Respondemos en menos de 30 minutos."
-            }
-          }
-        ]
-      })
-      document.head.appendChild(faqScript)
-    }
   }, [title, description, keywords, canonicalUrl, ogImage, ogType, pathname])
 
   return null
