@@ -1,112 +1,141 @@
-# GitHub Configuration - Mariachis Bogotá Élite
+# Configuración de GitHub Actions para Despliegue en Vercel
 
-## 📁 Estructura de GitHub
+## 📋 Requisitos Previos
 
-### Workflows
-- `.github/workflows/deploy.yml` - Workflow de GitHub Actions para despliegue automático en Vercel
+Para habilitar el despliegue automático en Vercel, necesitas configurar las siguientes variables de entorno en tu repositorio de GitHub:
 
-### Configuración de Secrets Necesarios
-Para el despliegue automático, configura los siguientes secrets en GitHub:
+### 🔑 Variables de Entorno Necesarias
 
-- `VERCEL_TOKEN` - Token de autenticación de Vercel
-- `ORG_ID` - ID de la organización en Vercel
-- `PROJECT_ID` - ID del proyecto en Vercel
+1. **VERCEL_TOKEN**: Tu token de autenticación de Vercel
+2. **ORG_ID**: El ID de tu organización en Vercel
+3. **PROJECT_ID**: El ID de tu proyecto en Vercel
 
-## 🔄 Actualizaciones Recientes
+## 🚀 Configuración Paso a Paso
 
-### Cambios en Componentes (Marzo 2026)
+### Paso 1: Obtener tu Token de Vercel
 
-#### 1. Gallery Component (`components/Gallery.tsx`)
-- ✅ **Actualizado**: Foto de bodas reemplazada de `/images/image_25bf8868.png` a `/images/Mariachi.jpg`
-- **Motivo**: Mejor calidad de imagen para la sección de bodas
+1. Inicia sesión en [Vercel](https://vercel.com)
+2. Ve a tu configuración de usuario (Settings)
+3. Click en "Tokens" en el menú lateral
+4. Crea un nuevo token con nombre descriptivo (ej: "GitHub Actions Deploy")
+5. **¡Importante!** Copia el token inmediatamente, no podrás verlo de nuevo
 
-#### 2. WhatsAppFloat Component (`components/WhatsAppFloat.tsx`)
-- ✅ **Actualizado**: Imagen del botón de WhatsApp cambiada de `/images/—Pngtree—whatsapp icon logo whatsapp logo_3560533.png` a `/images/icons8-whatsapp-200.apng.png`
-- **Motivo**: Icono de WhatsApp más profesional y moderno
+### Paso 2: Conectar tu Repositorio con Vercel
 
-#### 3. Analytics Component (`components/Analytics.tsx`)
-- ✅ **Solucionado**: Problema de hidratación corregido
-- ✅ **Cambiado**: Uso de `useEffect` en lugar de renderizado directo de scripts
-- **Motivo**: Prevenir errores de hidratación entre servidor y cliente
+**Opción A: Importar desde GitHub**
+1. En Vercel, click en "New Project"
+2. Selecciona "Import Git Repository"
+3. Conecta tu cuenta de GitHub y selecciona el repositorio
+4. Vercel detectará automáticamente que es un proyecto Next.js
+5. Click en "Deploy"
 
-#### 4. Layout Component (`app/layout.tsx`)
-- ✅ **Reubicado**: Componente `Analytics` movido de `<head>` a `<body>`
-- **Motivo**: Mejor compatibilidad con renderizado del lado del cliente
+**Opción B: Usar Vercel CLI**
+```bash
+# Instalar Vercel CLI
+npm i -g vercel
 
-## 🚀 Características de Despliegue
+# Login en Vercel
+vercel login
 
-### GitHub Actions
-- **Trigger**: Push y Pull Request a ramas `main` o `master`
-- **Proceso**: 
-  1. Checkout del código
-  2. Setup de Node.js 18
-  3. Instalación de dependencias
-  4. Ejecución de linter
-  5. Build del proyecto
-  6. Despliegue en Vercel
+# Conectar repositorio
+vercel --prod
+```
 
-### Optimizaciones
-- ✅ Cache de dependencias npm
-- ✅ Ejecución de linter para calidad de código
-- ✅ Build previo al despliegue
-- ✅ Despliegue automático en producción
+### Paso 3: Obtener los IDs Necesarios
 
-## 📊 Monitoreo
+Después de conectar tu proyecto:
 
-### Vercel Analytics
-- Integrado en componente `Analytics`
-- Google Analytics configurado
-- Facebook Pixel incluido
-- Schema.org LocalBusiness para SEO
+1. **ORG_ID**: 
+   - Ve al dashboard de tu proyecto en Vercel
+   - La URL mostrará: `vercel.com/[ORG_ID]/[PROJECT_NAME]`
+   - El primer valor es tu ORG_ID
 
-### Vercel Speed Insights
-- Monitoreo de rendimiento en tiempo real
-- Web Vitals tracking
-- Análisis de velocidad de carga
+2. **PROJECT_ID**:
+   - En el dashboard de tu proyecto
+   - Ve a "Settings" → "General"
+   - El Project ID estará visible ahí
 
-## 🔧 Configuración Técnica
+### Paso 4: Configurar Secrets en GitHub
 
-### Framework
-- **Next.js 14** con App Router
-- **TypeScript** para type safety
-- **Tailwind CSS** para estilos
-- **Framer Motion** para animaciones
+1. Ve a tu repositorio de GitHub
+2. Click en "Settings" → "Secrets and variables" → "Actions"
+3. Click en "New repository secret"
+4. Agrega los siguientes secrets:
 
-### Optimizaciones SEO
-- Meta tags dinámicos
-- Sitemap XML automático
-- Robots.txt configurado
-- Schema.org implementado
-- Imágenes optimizadas con Next.js Image
+```bash
+# Secret: VERCEL_TOKEN
+# Value: [tu-token-de-vercel]
 
-### Seguridad
-- Headers de seguridad configurados
-- X-Frame-Options: DENY
-- X-Content-Type-Options: nosniff
-- Referrer-Policy: strict-origin-when-cross-origin
-- X-XSS-Protection: 1; mode=block
+# Secret: ORG_ID  
+# Value: [tu-org-id]
 
-## 📝 Notas de Mantenimiento
+# Secret: PROJECT_ID
+# Value: [tu-project-id]
+```
 
-### Próximas Mejoras Sugeridas
-1. Implementar tests unitarios con Jest
-2. Agregar integración con Google Search Console
-3. Configurar PWA (Progressive Web App)
-4. Implementar lazy loading avanzado
-5. Agregar más idiomas (inglés)
+### Paso 5: Verificar la Configuración
 
-### Archivos Clave Actualizados
-- `components/Gallery.tsx` - Galería con nueva imagen de bodas
-- `components/WhatsAppFloat.tsx` - Botón de WhatsApp con nuevo icono
-- `components/Analytics.tsx` - Solución de hidratación
-- `app/layout.tsx` - Reubicación de componentes
-- `.github/workflows/deploy.yml` - Pipeline de despliegue
-- `DEPLOY_VERCEL.md` - Documentación actualizada
+Después de configurar los secrets, el workflow automáticamente:
 
-## 🆘 Soporte
+- ✅ Detectará que las variables están configuradas
+- ✅ Ejecutará el despliegue en pushes a la rama main
+- ✅ Creará previews en pull requests
+- ✅ Mostrará mensajes informativos si algo falla
 
-Para problemas con el despliegue:
-1. Verificar secrets configurados en GitHub
-2. Revisar logs de GitHub Actions
-3. Verificar configuración en Vercel Dashboard
-4. Consultar `DEPLOY_VERCEL.md` para troubleshooting
+## 🔧 Solución de Problemas
+
+### Si el despliegue falla:
+
+1. **Verifica los logs del workflow** en GitHub Actions
+2. **Asegúrate de que los secrets estén correctamente configurados**
+3. **Comprueba que el proyecto build localmente**:
+   ```bash
+   npm run build
+   ```
+
+### Si las variables no están configuradas:
+
+El workflow mostrará un mensaje informativo y continuará con el build y tests, pero omitirá el despliegue:
+
+```
+⚠️ VERCEL_TOKEN no configurado. El despliegue se saltará.
+📋 Para configurar el despliegue automático:
+   1. Ve a Settings → Secrets → Actions en tu repositorio de GitHub
+   2. Agrega VERCEL_TOKEN con tu token de Vercel
+   3. Agrega ORG_ID con tu ID de organización
+   4. Agrega PROJECT_ID con tu ID de proyecto
+```
+
+## 📁 Archivos Relacionados
+
+- `.github/workflows/deploy.yml` - Workflow de GitHub Actions
+- `DEPLOY_VERCEL.md` - Instrucciones generales de despliegue
+- `vercel.json` - Configuración de Vercel
+
+## 🔄 Flujo de Trabajo
+
+El workflow se ejecuta en:
+
+- **Push a main/master**: Despliegue a producción
+- **Pull Request**: Despliegue de preview (si está configurado)
+
+## 📝 Notas Importantes
+
+- **Seguridad**: Nunca compartas tus tokens públicamente
+- **Tokens**: Puedes generar múltiples tokens para diferentes propósitos
+- **Organizaciones**: Si trabajas en una organización, asegúrate de usar el ORG_ID correcto
+
+## 🚀 Alternativas
+
+Si prefieres no usar GitHub Actions, puedes desplegar manualmente:
+
+```bash
+# Instalar Vercel CLI
+npm i -g vercel
+
+# Desplegar manualmente
+vercel --prod
+```
+
+---
+**¿Problemas con la configuración?** Consulta el archivo `DEPLOY_VERCEL.md` para más detalles o despliega manualmente usando Vercel CLI.
