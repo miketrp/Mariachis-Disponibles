@@ -19,12 +19,29 @@ export default function Navbar() {
     { name: 'Contacto', href: '#contacto' },
   ]
 
+  // Función para manejar el scroll suave
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault()
+    const element = document.querySelector(href)
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+    setIsOpen(false) // Cerrar menú móvil al hacer clic
+  }
+
   return (
     <nav className="fixed w-full bg-white/90 dark:bg-mariachi-black/90 backdrop-blur-md z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="#inicio" className="flex items-center space-x-2">
+          <Link 
+            href="#inicio" 
+            className="flex items-center space-x-2"
+            onClick={(e) => handleNavClick(e, '#inicio')}
+          >
             <div className="w-10 h-10 bg-mariachi-red rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-xl">🎺</span>
             </div>
@@ -39,7 +56,8 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-mariachi-black dark:text-white hover:text-mariachi-red dark:hover:text-mariachi-gold transition-colors duration-300 font-medium"
+                onClick={(e) => handleNavClick(e, item.href)}
+                className="text-mariachi-black dark:text-white hover:text-mariachi-red dark:hover:text-mariachi-gold transition-colors duration-300 font-medium cursor-pointer"
               >
                 {item.name}
               </Link>
@@ -80,7 +98,7 @@ export default function Navbar() {
               key={item.name}
               href={item.href}
               className="block px-3 py-2 text-mariachi-black dark:text-white hover:text-mariachi-red dark:hover:text-mariachi-gold transition-colors duration-300 font-medium"
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => handleNavClick(e, item.href)}
             >
               {item.name}
             </Link>
