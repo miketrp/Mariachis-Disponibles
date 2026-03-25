@@ -5,10 +5,10 @@ import { useEffect } from 'react'
 
 export default function Analytics() {
   useEffect(() => {
-    // Google Analytics
+    // Google Analytics - GA4
     const script1 = document.createElement('script')
     script1.async = true
-    script1.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID'
+    script1.src = 'https://www.googletagmanager.com/gtag/js?id=G-YZS0N9M8J4'
     document.head.appendChild(script1)
 
     const script2 = document.createElement('script')
@@ -16,7 +16,7 @@ export default function Analytics() {
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'GA_MEASUREMENT_ID');
+      gtag('config', 'G-YZS0N9M8J4');
     `
     document.head.appendChild(script2)
 
