@@ -8,7 +8,7 @@ export default function Analytics() {
     // Google Analytics - GA4
     const script1 = document.createElement('script')
     script1.async = true
-    script1.src = 'https://www.googletagmanager.com/gtag/js?id=G-YZS0N9M8J4'
+    script1.src = 'https://www.googletagmanager.com/gtag/js?id=G-52SS2FMHXP'
     document.head.appendChild(script1)
 
     const script2 = document.createElement('script')
@@ -16,7 +16,7 @@ export default function Analytics() {
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-YZS0N9M8J4');
+      gtag('config', 'G-52SS2FMHXP');
     `
     document.head.appendChild(script2)
 
